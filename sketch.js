@@ -21,10 +21,7 @@ var stones = [];
 var collided = false;
 function preload() {
   zombie1 = loadImage("./assets/zombie1.png");
-  zombie2 = loadImage("./assets/zombie2.png");
 
-  zombie3 = loadImage("./assets/zombie3.png");
-  zombie4 = loadImage("./assets/zombie4.png");
   sadzombie = loadImage("./assets/sad_zombie.png");
 
   backgroundImage = loadImage("./assets/background.png");
@@ -54,8 +51,8 @@ function setup() {
   }
 
   zombie = createSprite(width / 2, height - 100, 50, 50);
-  zombie.addAnimation("lefttoright", zombie1, zombie2, zombie1);
-  zombie.addAnimation("righttoleft", zombie3, zombie4, zombie3);
+  zombie.addAnimation("lefttoright", zombie1, zombie1, zombie1);
+  zombie.addAnimation("righttoleft", zombie1, zombie1, zombie1);
   zombie.addImage("sad", sadzombie);
 
   zombie.scale = 0.1;
@@ -78,24 +75,7 @@ function draw() {
     var pos = stone.body.position;
     
     var distance = dist(zombie.position.x, zombie.position.y, pos.x, pos.y);
-    //var distance = dist(zombie.position.x, zombie.position.y);
-    //var distance = dist(pos.x, pos.y);
-    //var distance = dist(zombie, pos);
-
-
-    /*if (distance >= 50) {
-      zombie.velocityX = 0;
-      Matter.Body.setVelocity(stone.body, { x: 10, y: -10 });
-      zombie.changeImage("sad");
-      collided = true;
-    }*/
-
-    /*if (distance <= 50) {
-      zombie.velocityX = 0;
-      Matter.Body.setVelocity(stone.body, { x: 10, y: -10 });
-      zombie.Image("sad");
-      collided = true;
-    }*/
+  
 
     if (distance <= 50) {
       zombie.velocityX = 0;
@@ -104,13 +84,7 @@ function draw() {
       collided = true;
     }
 
-    /*if (distance <= 50) {
-      zombie.velocityX = 0;
-      Matter.Body.Velocity(stone.body, { x: 10, y: -10 });
-      zombie.changeImage("sad");
-      collided = true;
-    }*/
-
+   
   }
 
   if (zombie.position.x >= width - 300 && !collided) {
