@@ -7,7 +7,7 @@ html, body {
   width:70px;
   height: 70px;
   border-radius: 35px;
-  background-image: url('./assets/axe.png');
+  background-image: url('axe.png');
   background-color: #80deea;
   padding: 10px;
   background-size: cover;
