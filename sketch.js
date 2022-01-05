@@ -20,11 +20,11 @@ var backgroundImage;
 var stones = [];
 var collided = false;
 function preload() {
-  zombie1 = loadImage("./assets/zombie1.png");
+  zombie1 = loadImage("zombie1.png");
 
-  sadzombie = loadImage("./assets/sad_zombie.png");
+  sadzombie = loadImage("sad_zombie.png");
 
-  backgroundImage = loadImage("./assets/background.png");
+  backgroundImage = loadImage("background.png");
 }
 
 function setup() {
